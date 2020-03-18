@@ -10,7 +10,8 @@
             class="badge badge-pill badge-dark">
             {{ server.status }}
           </span>
-          <strong>{{ server.name }}</strong> | 
+          <!-- shorten is a custom pipe  -->
+          <strong>{{ server.name | shorten}}</strong> | 
           {{ server.instanceType | uppercase }} | 
           <!-- default data pipe  -->
           <!-- {{ server.started | date}} -->
