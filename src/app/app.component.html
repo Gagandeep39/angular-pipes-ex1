@@ -4,6 +4,8 @@
       <input type="text" [(ngModel)]="filterKey" class="form-control" placeholder="Enter Server Status to filter">
       <hr>
       <ul class="list-group">
+        
+          <!-- Here the data will be filtered from servers based on search let, after which for loop will run  -->
         <li
           class="list-group-item"
           *ngFor="let server of servers | filter:filterKey:'status'"
