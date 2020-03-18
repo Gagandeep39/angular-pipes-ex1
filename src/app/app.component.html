@@ -4,6 +4,13 @@
       <input type="text" [(ngModel)]="filterKey" class="form-control" placeholder="Enter Server Status to filter">
       <button type="button" class="btn btn-primary m-1" (click)="addServer()">Add Server</button>
       <hr>
+      <h3>
+         <!-- Async pipe  -->
+         <!-- It recognizes promises and observables and subscrible automatically  -->
+         <!-- Whenever it recieves a value from PushSubscription, it will print the result on screen  -->
+        Status: {{appStatus | async}}
+      </h3>
+      <hr>
       <ul class="list-group">
         
           <!-- Here the data will be filtered from servers based on search let, after which for loop will run  -->
