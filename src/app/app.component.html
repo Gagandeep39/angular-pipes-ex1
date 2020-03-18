@@ -7,12 +7,15 @@
           *ngFor="let server of servers"
           [ngClass]="getStatusClasses(server)">
           <span
-            class="badge">
+            class="badge badge-pill badge-dark">
             {{ server.status }}
           </span>
           <strong>{{ server.name }}</strong> | 
           {{ server.instanceType | uppercase }} | 
-          {{ server.started | date}}
+          <!-- default data pipe  -->
+          <!-- {{ server.started | date}} -->
+          <!-- Parameterized data pipe -->
+          {{ server.started | date: 'fullDate'}}
         </li>
       </ul>
     </div>
