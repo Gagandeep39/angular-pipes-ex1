@@ -12,6 +12,7 @@
           </span>
           <!-- shorten is a custom pipe  -->
           <strong>{{ server.name | shorten}}</strong> | 
+          <strong>{{ server.name | shorten:4}}</strong> | 
           {{ server.instanceType | uppercase }} | 
           <!-- default data pipe  -->
           <!-- {{ server.started | date}} -->
